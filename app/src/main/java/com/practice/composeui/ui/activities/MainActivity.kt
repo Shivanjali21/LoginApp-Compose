@@ -23,8 +23,14 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.practice.composeui.ui.screen.DropDownAnim
 import com.practice.composeui.ui.screen.LoginScreen
+import com.practice.composeui.ui.screen.ProfileScreen
+import com.practice.composeui.ui.screen.ProfileSection
 import com.practice.composeui.ui.screen.RegisterScreen
+import com.practice.composeui.ui.screen.ShakingState
+import com.practice.composeui.ui.screen.rememberShakeButton
+import com.practice.composeui.ui.screen.shakable
 import com.practice.composeui.ui.theme.ComposeUITheme
 import kotlinx.coroutines.launch
 
@@ -32,9 +38,47 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //installSplashScreen()
+
         setContent {
             ComposeUITheme {
-                ComposeNavigation()
+                /*Surface(
+                  color = Color(0xFF101010),
+                  modifier = Modifier.fillMaxSize()
+                ) {
+                   DropDownAnim(
+                       text = "Hello World!",
+                       modifier = Modifier.padding(16.dp)
+                   ) {
+                      Text(
+                          text = "This is now revealed!",
+                          color = Color.White,
+                          modifier = Modifier.fillMaxWidth().height(100.dp).background(Color.Green)
+                      )
+                   }
+                }*/
+
+                //ProfileScreen()
+/*                Box(
+                    modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+
+                    val shakingState = rememberShakeButton(
+                      strength = ShakingState.Strength.Custom(60f),
+                      directions = ShakingState.Directions.RIGHT_THEN_LEFT
+                    )
+                    val scope  = rememberCoroutineScope()
+
+                    TextButton(
+                        onClick = {
+                            scope.launch {
+                              shakingState.shake(animDuration = 30)
+                            }
+                        },
+                        modifier = Modifier.shakable(shakingState)
+                     ) {
+                        Text(text = "Click Button To Shake", fontSize = 22.sp)
+                    }
+                }*/
             }
         }
     }
