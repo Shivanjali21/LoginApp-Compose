@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ComposeUI" parent="android:Theme.Material.Light.NoActionBar" />
+
+<!--    <style name="Theme.SplashScreen.SplashInsta" parent="Theme.SplashScreen">-->
+<!--        <item name="windowSplashScreenBackground">#B2E8B1</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_instagram</item>-->
+<!--        <item name="postSplashScreenTheme">@style/Theme.SplashScreen</item>-->
+<!--    </style>-->
+</resources>
